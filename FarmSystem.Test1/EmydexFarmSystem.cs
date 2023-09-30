@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace FarmSystem.Test
 {
-    public class EmydexFarmSystem
+    public class EmydexFarmSystem : IEmydexFarmSystem
     {
         private Queue<IAnimal> animalsInFarmSystem = new Queue<IAnimal>();
         //TEST 1
@@ -21,7 +21,17 @@ namespace FarmSystem.Test
         public void MakeNoise()
         {
             //Test 2 : Modify this method to make the animals talk
-            Console.WriteLine("There are no animals in the farm");
+            if (animalsInFarmSystem.Count > 0)
+            {
+                foreach (Animal animal in animalsInFarmSystem)
+                {
+                    animal.Talk();
+                }
+            }
+            else
+            {
+                Console.WriteLine("There are no animals in the farm");
+            }
         }
 
         //TEST 3

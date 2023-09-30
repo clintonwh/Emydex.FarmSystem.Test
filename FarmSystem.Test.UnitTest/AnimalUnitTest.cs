@@ -9,12 +9,12 @@ namespace FarmSystem.Test.UnitTest
         public void Talk_Horse_AreEqual()
         {
             //Arrange
-            IAnimal test = new Horse();
+            IAnimal horse = new Horse();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
 
             //Act
-            test.Talk();
+            horse.Talk();
 
             //Assert
             var output = stringWriter.ToString();

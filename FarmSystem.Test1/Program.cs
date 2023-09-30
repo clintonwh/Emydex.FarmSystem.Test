@@ -11,7 +11,7 @@ namespace FarmSystem.Test
             Excercise2();
             Excercise3();
             Excercise4();
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
 
 /************************************************************************************************************
