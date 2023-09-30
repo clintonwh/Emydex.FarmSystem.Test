@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B0742D37-2746-45D6-9133-4A1BA51D9814}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FarmSystem.Test</RootNamespace>
-    <AssemblyName>FarmSystem.Test</AssemblyName>
+    <RootNamespace>FarmSystem.Test1</RootNamespace>
+    <AssemblyName>FarmSystem.Test1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

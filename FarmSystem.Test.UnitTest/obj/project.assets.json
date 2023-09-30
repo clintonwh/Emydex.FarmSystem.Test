@@ -2304,8 +2304,8 @@
     },
     "FarmSystem.Test/1.0.0": {
       "type": "project",
-      "path": "../FarmSystem.Test1/FarmSystem.Test.csproj",
-      "msbuildProject": "../FarmSystem.Test1/FarmSystem.Test.csproj"
+      "path": "../FarmSystem.Test/FarmSystem.Test.csproj",
+      "msbuildProject": "../FarmSystem.Test/FarmSystem.Test.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2344,8 +2344,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\clintonw\\Desktop\\CodeExercises\\ETL-Repo-master\\FarmSystem.Test1\\FarmSystem.Test.csproj": {
-              "projectPath": "C:\\Users\\clintonw\\Desktop\\CodeExercises\\ETL-Repo-master\\FarmSystem.Test1\\FarmSystem.Test.csproj"
+            "C:\\Users\\clintonw\\Desktop\\CodeExercises\\ETL-Repo-master\\FarmSystem.Test\\FarmSystem.Test.csproj": {
+              "projectPath": "C:\\Users\\clintonw\\Desktop\\CodeExercises\\ETL-Repo-master\\FarmSystem.Test\\FarmSystem.Test.csproj"
             }
           }
         }
