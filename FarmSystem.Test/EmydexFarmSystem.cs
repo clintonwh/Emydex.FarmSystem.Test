@@ -2,12 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace FarmSystem.Test
 {
     public class EmydexFarmSystem : IEmydexFarmSystem
     {
         private Queue<IAnimal> animalsInFarmSystem = new Queue<IAnimal>();
+        
+        public EventHandler AllAnimalsHaveBeenReleased;        
+
+        public EmydexFarmSystem()
+        {
+            AllAnimalsHaveBeenReleased += (s, args) =>
+            {
+                Console.WriteLine("Emydex Farm is now empty");
+            };
+        }
+        
         //TEST 1
         public void Enter(IAnimal animal)
         {
@@ -62,7 +74,21 @@ namespace FarmSystem.Test
         //TEST 4
         public void ReleaseAllAnimals()
         {
-           Console.WriteLine("There are still animals in the farm, farm is not free");
+            if (animalsInFarmSystem.Count > 0)
+            {
+                do
+                {
+                    IAnimal animal = animalsInFarmSystem.Dequeue();
+                    animal.Release();
+                }
+                while (animalsInFarmSystem.Count != 0);
+
+                AllAnimalsHaveBeenReleased.Invoke(this, EventArgs.Empty);               
+            }
+            else
+            {
+                Console.WriteLine("There are still animals in the farm, farm is not free");
+            }          
         }
     }
 }

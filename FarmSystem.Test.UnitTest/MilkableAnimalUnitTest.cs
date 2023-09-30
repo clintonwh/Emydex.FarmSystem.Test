@@ -23,7 +23,7 @@ namespace FarmSystem.Test.UnitTest
 
             //Assert
             var output = stringWriter.ToString();
-            Assert.AreEqual("Cow was milk!\r\n", output);
+            Assert.AreEqual("Cow was milked!\r\n", output);
         }
     }
 }

@@ -64,5 +64,10 @@ namespace FarmSystem.Test
         {
             Console.WriteLine($"{Species} is running");
         }
+
+        public void Release()
+        {
+            Console.WriteLine($"{Species} has left the farm");
+        }
     }
 }

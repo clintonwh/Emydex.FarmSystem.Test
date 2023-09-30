@@ -10,7 +10,7 @@ namespace FarmSystem.Test
     {
         public void ProduceMilk()
         {
-            Console.WriteLine($"{Species} was milk!");
+            Console.WriteLine($"{Species} was milked!");
         }
     }
 }

@@ -133,7 +133,45 @@ namespace FarmSystem.Test.UnitTest
 
             //Assert
             var output = System.Text.RegularExpressions.Regex.Split(stringWriter.ToString(), "\r?\n");
-            Assert.AreEqual($"{animal.Species} was milk!", output[1]);
+            Assert.AreEqual($"{animal.Species} was milked!", output[1]);
+        }
+
+        [TestMethod]
+        public void ReleaseAllAnimals_NoAnimalPresentInFarm_AreEqual()
+        {
+            //Arrange
+            IEmydexFarmSystem farmSystem = new EmydexFarmSystem();
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            //Act
+            farmSystem.ReleaseAllAnimals();
+
+            //Assert
+            var output = stringWriter.ToString();
+            Assert.AreEqual("There are still animals in the farm, farm is not free\r\n", output);
+        }
+
+        [TestMethod]
+        public void ReleaseAllAnimals_AnimalsPresentInFarm_AreEqual()
+        {
+            //Arrange
+            IEmydexFarmSystem farmSystem = new EmydexFarmSystem();
+            IAnimal cow = new Cow();
+            IAnimal horse = new Horse();
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            //Act
+            farmSystem.Enter(cow);
+            farmSystem.Enter(horse);
+            farmSystem.ReleaseAllAnimals();
+
+            //Assert
+            var output = System.Text.RegularExpressions.Regex.Split(stringWriter.ToString(), "\r?\n");
+            Assert.AreEqual($"{cow.Species} has left the farm", output[2]);
+            Assert.AreEqual($"{horse.Species} has left the farm", output[3]);
+            Assert.AreEqual("Emydex Farm is now empty", output[4]);
         }
     }
 }

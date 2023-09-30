@@ -9,5 +9,6 @@
         void Run();
         void Talk();
         void Walk();
+        void Release();
     }
 }
