@@ -1,0 +1,14 @@
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\bin\Debug\FarmSystem.Test1.exe.config
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\bin\Debug\FarmSystem.Test1.exe
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\bin\Debug\FarmSystem.Test1.pdb
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\obj\Debug\FarmSystem.Test.csproj.AssemblyReference.cache
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\obj\Debug\FarmSystem.Test.csproj.CoreCompileInputs.cache
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\obj\Debug\FarmSystem.Test1.exe
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test1\obj\Debug\FarmSystem.Test1.pdb
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\bin\Debug\FarmSystem.Test.exe.config
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\bin\Debug\FarmSystem.Test.exe
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\bin\Debug\FarmSystem.Test.pdb
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\obj\Debug\FarmSystem.Test.csproj.AssemblyReference.cache
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\obj\Debug\FarmSystem.Test.csproj.CoreCompileInputs.cache
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\obj\Debug\FarmSystem.Test.exe
+C:\Users\clintonw\Desktop\CodeExercises\ETL-Repo-master\FarmSystem.Test\obj\Debug\FarmSystem.Test.pdb

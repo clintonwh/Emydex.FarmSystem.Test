@@ -2,17 +2,18 @@
 
 namespace FarmSystem.Test
 {
-    public class Cow : MilkableAnimal, IMilkableAnimal
+    public class Sheep : Animal
     {
-        public Cow() : base()
+        public Sheep() : base()
         { 
             NoOfLegs = 4;
-            Species = "Cow";
+            Species = "Sheep";
         }
 
         public override void Talk()
         {
-            Console.WriteLine("Cow says Moo!");
+            Console.WriteLine("Sheep says baa!");
         }
     }
+
 }
