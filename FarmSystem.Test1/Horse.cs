@@ -12,7 +12,7 @@ namespace FarmSystem.Test
 
         public override void Talk()
         {
-            Console.WriteLine("Horse says neigh!");
+            Console.WriteLine("Horse says Neigh!");
         }
        
     }

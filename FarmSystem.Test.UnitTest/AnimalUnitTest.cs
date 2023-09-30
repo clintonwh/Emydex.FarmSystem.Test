@@ -18,7 +18,7 @@ namespace FarmSystem.Test.UnitTest
 
             //Assert
             var output = stringWriter.ToString();
-            Assert.AreEqual("Horse says neigh!\r\n", output);
+            Assert.AreEqual("Horse says Neigh!\r\n", output);
         }
 
         [TestMethod]

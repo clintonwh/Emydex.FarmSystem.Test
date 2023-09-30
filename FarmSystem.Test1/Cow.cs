@@ -1,8 +1,9 @@
-﻿using System;
+﻿using FarmSystem.Test2;
+using System;
 
 namespace FarmSystem.Test
 {
-    public class Cow : Animal
+    public class Cow : MilkableAnimal, IMilkableAnimal
     {
         public Cow() : base()
         { 
@@ -14,11 +15,5 @@ namespace FarmSystem.Test
         {
             Console.WriteLine("Cow says Moo!");
         }
-
-        public void ProduceMilk()
-        {
-            Console.WriteLine("Cow produced milk");
-        }
-
     }
 }

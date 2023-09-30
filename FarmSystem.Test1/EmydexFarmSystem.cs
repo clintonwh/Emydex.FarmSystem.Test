@@ -1,6 +1,8 @@
-﻿using System;
+﻿using FarmSystem.Test2;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FarmSystem.Test
 {
@@ -23,7 +25,7 @@ namespace FarmSystem.Test
             //Test 2 : Modify this method to make the animals talk
             if (animalsInFarmSystem.Count > 0)
             {
-                foreach (Animal animal in animalsInFarmSystem)
+                foreach (IAnimal animal in animalsInFarmSystem)
                 {
                     animal.Talk();
                 }
@@ -37,7 +39,25 @@ namespace FarmSystem.Test
         //TEST 3
         public void MilkAnimals()
         {
-            Console.WriteLine("Cannot identify the farm animals which can be milked");
+            List<IMilkableAnimal> milkableAnimals = GetMilkableAnimals();
+
+            if (milkableAnimals.Count > 0)
+            {
+                foreach (IMilkableAnimal animal in milkableAnimals)
+                {
+                    animal.ProduceMilk();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Cannot identify the farm animals which can be milked");
+            }        
+        }
+
+        private List<IMilkableAnimal> GetMilkableAnimals()
+        {
+            List<IAnimal> animalList = animalsInFarmSystem.ToList();
+            return animalList.OfType<IMilkableAnimal>().ToList();
         }
 
         //TEST 4

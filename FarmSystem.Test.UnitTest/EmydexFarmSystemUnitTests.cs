@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmSystem.Test2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -98,8 +99,42 @@ namespace FarmSystem.Test.UnitTest
 
             //Assert
             var output = System.Text.RegularExpressions.Regex.Split(stringWriter.ToString(), "\r?\n");
-            Assert.AreEqual("Horse says neigh!", output[2]);
+            Assert.AreEqual("Horse says Neigh!", output[2]);
             Assert.AreEqual("Hen says CLUCKAAAAAWWWWK!", output[3]);
+        }
+
+        [TestMethod]
+        public void MilkAnimals_NoMilkableAnimalPresent_AreEqual()
+        {
+            //Arrange
+            IEmydexFarmSystem farmSystem = new EmydexFarmSystem();
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            //Act
+            farmSystem.MilkAnimals();
+
+            //Assert
+            var output = stringWriter.ToString();
+            Assert.AreEqual("Cannot identify the farm animals which can be milked\r\n", output);
+        }
+
+        [TestMethod]
+        public void MilkAnimals_MilkableAnimalPresent_AreEqual()
+        {
+            //Arrange
+            IEmydexFarmSystem farmSystem = new EmydexFarmSystem();
+            IMilkableAnimal animal = new Cow();
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            //Act
+            farmSystem.Enter(animal);
+            farmSystem.MilkAnimals();
+
+            //Assert
+            var output = System.Text.RegularExpressions.Regex.Split(stringWriter.ToString(), "\r?\n");
+            Assert.AreEqual($"{animal.Species} was milk!", output[1]);
         }
     }
 }

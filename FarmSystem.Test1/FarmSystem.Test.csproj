@@ -58,6 +58,7 @@
     <Compile Include="IAnimal.cs" />
     <Compile Include="IEmydexFarmSystem.cs" />
     <Compile Include="IMilkableAnimal.cs" />
+    <Compile Include="MilkableAnimal.cs" />
     <Compile Include="Sheep.cs" />
     <Compile Include="Hen.cs" />
     <Compile Include="Program.cs" />
