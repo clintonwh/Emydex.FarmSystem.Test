@@ -1,4 +1,4 @@
-﻿namespace FarmSystem.Test1
+﻿namespace FarmSystem.Test
 {
     public interface IAnimal
     {

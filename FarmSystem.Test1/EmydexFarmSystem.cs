@@ -2,18 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace FarmSystem.Test1
+namespace FarmSystem.Test
 {
     public class EmydexFarmSystem
     {
-        private Queue<Animal> animalsInFarmSystem = new Queue<Animal>();
+        private Queue<IAnimal> animalsInFarmSystem = new Queue<IAnimal>();
         //TEST 1
-        public void Enter(Animal animal)
+        public void Enter(IAnimal animal)
         {
-            //TODO Modify the code so that we can display the type of animal (cow, sheep etc) 
-            //Hold all the animals so it is available for future activities
-            animalsInFarmSystem.Enqueue(animal);
+            //TODO Modify the code so that we can display the type of animal (cow, sheep etc)
             Console.WriteLine($"{animal.Species} has entered the Emydex farm");
+
+            //Hold all the animals so it is available for future activities
+            animalsInFarmSystem.Enqueue(animal);           
         }
      
         //TEST 2

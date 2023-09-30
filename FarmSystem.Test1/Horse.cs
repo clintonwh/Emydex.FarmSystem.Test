@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FarmSystem.Test1
+namespace FarmSystem.Test
 {
     public class Horse : Animal
     {

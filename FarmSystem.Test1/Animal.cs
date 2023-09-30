@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmSystem.Test1
+namespace FarmSystem.Test
 {
     public class Animal : IAnimal
     {
         private string _id;
         private int _noOfLegs;
-        private string _species;
+        private string _species = "Unknown animal";
 
         public Animal()
         {
@@ -52,7 +52,7 @@ namespace FarmSystem.Test1
 
         public virtual void Talk()
         {
-            Console.WriteLine("Animal say ANIMAL!");
+            Console.WriteLine($"{Species} makes a noise");
         }
 
         public void Walk()
